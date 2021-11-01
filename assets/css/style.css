@@ -323,7 +323,7 @@ main #portfolio article .article-info a {
   background-color: #a0c63f;
   color: white;
 }
-main #portfolio article .article-info p {
+main #portfolio article .article-info figcaption {
   font-size: 12px;
 }
 main #portfolio article .article-info a {
