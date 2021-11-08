@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -85,7 +85,8 @@ sub { bottom: -.25em; }
 body {
   box-sizing: border-box;
   /* font-family: sans-serif; */
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Exo', sans-serif;
   background-color: #FBFCFC;
 }
 
@@ -109,132 +110,67 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1350px;
-  width: 86%; 
+  width: 60%; 
   margin: 0 auto;
+  position: relative;
 }
 /*=================================
   Header styling starts here
 =================================*/
-.green {
-  color: #a0c63f;
-}
-#responsive-nav {
-  width: 30%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  box-shadow: -10px 0px 10px -12px rgba(0,0,0,0.75);
-  background-color: white;
-  z-index: 20;
-  transition: .5s ease-in-out;
-  transform: translateX(100%);
-}
-#responsive-nav.show {
-  transform: translateX(0%);
-}
-#responsive-nav ul {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  position: relative;
-  top: 20%;
-}
-#responsive-nav ul li {
-  padding: 1rem 0;
-}
-#responsive-nav ul li a {
-  font-size: 12px;
-  color: black;
-  font-weight: bold;
-  transition: .2s ease-in-out;
-}
-#responsive-nav ul li a:hover {
-  color: #666;
-}
-#responsive-nav button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 10px;
-  background-color: #E5E7E9;
-  font-weight: bold;
-  color: #666;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  transition: .2s ease-in-out;
-}
-#responsive-nav button:hover {
-  background: #FBFCFC;
-  border: 1px solid #666;
-}
-header {
+.green { color: #a0c63f; }
 
-}
 nav {
+  padding:  14px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding:  10px 0;
 }
+
 nav div {
   display: flex;
   align-items: center;
   font-family: 'Zen Kurenaido', sans-serif;
 }
+
 nav div i {
-  margin-right: 5px;
+  margin-right: 2px;
   font-size: 30px;
 }
-nav div img {
-  width: 50px;
-}
+
+nav div img { width: 50px; }
+
 nav div h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
 }
+
 nav div p {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
 }
+
 nav .hamburger {
   display: none;
   cursor: pointer;
 }
+
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
+
 nav ul li {
+  padding: 0 20px;
   font-weight: bold;
-  padding: 0 1rem;
-}
-nav ul li a {
-  font-size: 10px;
-  color: black;
-}
-nav ul li a:hover {
-  color: gray;
-}
-.hero {
-  position: relative;
-}
-.hero h2 {
-  position: absolute;
-  top: 30%;
-  bottom: 40%;
-  left: 60%;
-  right: 20%;
-  text-align: center;
-  color: white;
-  font-size: 20px;
 }
 
+nav ul li a {
+  color: #000;
+  font-size: 10px;
+}
+
+nav ul li a:hover { color: gray; }
 /*=================================
   Header styling ends here
 =================================*/  
@@ -243,114 +179,188 @@ nav ul li a:hover {
   main styling starts here
 =================================*/
 main {
-  width: 60%;
   margin: auto;
-  padding: 1rem 0;
+  background-color: #FBFCFC;
+}
+
+/* banner styling starts here */
+.hero {
+  width: 100%;
   position: relative;
 }
+
+.hero h2 {
+  position: absolute;
+  top: 19%;
+  right: 22%;
+  bottom: 42%;
+  left: 53%;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+#left-arrow i, #right-arrow i {
+  position: absolute;
+  top: 45%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+#left-arrow i {
+  padding: 6px 12px;
+  border: 5px solid white;
+  border-radius: 50%;
+  left: 7%;
+  color: white;
+}
+
+#right-arrow i {
+  padding: 6px 12px;
+  border: 5px solid white;
+  border-radius: 50%;
+  right: 7%;
+  color: white;
+}
+
+#left-arrow i:hover, #right-arrow i:hover {
+  border-color: #E5E7E9;
+  color: #E5E7E9;
+}
+/* banner styling ends here */
+
+/* service styling starts here */
 main h1 {
-  font-size: 22px;
-  padding: 1rem 0;
-  margin: 1rem 0;
+  padding: 12px 0 16px 0;
+  margin: 10px 0;
+  border-bottom: 2px dashed #E5E7E9;
   display: flex;
   justify-content: center;
+  font-size: 26px;
 }
+
 main #service {
-  border-top: 2px dashed #E5E7E9;
+  padding: 16px;
+  margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 210px);
   justify-items: center;
-  align-self: center;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
 }
+
 main #service li {
+  margin: 5px 0;
   text-align: center;
-  margin: 1rem 2rem;
 }
+
 main #service li i {
-  padding: 1.5rem;
+  padding: 26px;
   margin-bottom: 10px;
-  background: #a0c63f;
-  border: 12px solid white;
+  border: 14px solid white;
   border-radius: 50%;
-  font-size: 40px;
+  background: #a0c63f;
   color: white;
-  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+  font-size: 55px;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,.60);
 }
-main #service li small {
-  font-size: 12px;
-}
-main #service li h2 {
-  font-size: 18px;
-}
-main #service li i:nth-last-child(4) {
-  padding: 2rem 4rem;
-}
-main > h2 {
-  font-size: 18px;
-  padding: 1rem;
+
+main #service li small { font-size: 12px; }
+main #service li h2 { font-size: 24px; }
+main #service li:nth-child(4) i { padding: 26px 36px; }
+/* service styling ends here */
+
+/* portfolio styling starts here */
+main > h2, main .portfolio-section h2 {
+  padding: 16px 0;
   display: flex;
   justify-content: flex-start;
+  font-size: 18px;
 }
+
+main .portfolio-section h2, .advertisers-section h2 { font-size: 20px; }
+
 main .line {
   color: #E5E7E9;
   font-weight: bold;
 }
+
+.portfolio-section h2 { margin-left: 50px; }
+
 main #portfolio {
+  margin: 0 0 30px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 390px);
   justify-items: center;
   align-items: center;
-  grid-gap: 1rem;
-  margin-bottom: 1rem;
 }
+
 main #portfolio article {
+  height: 120px;
+  margin: 10px 0;
+  border: 1px solid #E5E7E9;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgb(199, 196, 196);
+  grid-template-columns: repeat(2, 180px);
+  overflow: hidden;
 }
-main #portfolio article img {
-  width: 100%;
-  height: 100%;
-}
+
+main #portfolio article h3 { font-size: 14px; }
+main #portfolio article p { font-size: 10px; }
+main #portfolio article img { width: 100%; }
+
 main #portfolio article .article-info {
   padding: 10px;
+  background-color: #fff;
 }
+
 main #portfolio article .article-info a {
-  font-size: 12px;
-  padding: 5px 8px;
+  padding: 2px 8px;
   background-color: #a0c63f;
   color: white;
+  font-size: 10px;
 }
-main #portfolio article .article-info figcaption {
-  font-size: 12px;
-}
-main #portfolio article .article-info a {
-  margin: 5px 0;
-}
+
+main #portfolio article .article-info a { margin: 5px 0; }
+/* portfolio styling ends here */
+
+/* advertisers styling starts here */
 #advertisers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(6, 125px);
+  justify-items: center;
   align-items: center;
-  margin-bottom: 1rem;
+  text-align: center;
 }
-#advertisers li {
-  margin: 10px;
+
+.advertisers-section h2 {
+  padding: 0 0 20px 40px;
 }
-main .moveUp {
-  margin: 10px;
-  padding: 10px 12px;
+
+.advertisers-section li { border: 1px solid black; }
+/* advertisers styling ends here */
+
+/* toggle styling starts here */
+main .toggle-up-down {
+  position: absolute;
+  top: 25px;
+  right: 0%;
+  bottom: 0;
+}
+
+main .toggle-up-down i {
+  padding: 8px 10px;
+  border-radius: 50%;
+  border: none;
   background-color: #a0c63f;
   color: white;
-  border: none;
+  font-size: 12px;
   outline: none;
-  border-radius: 50%;
 }
-main .moveUp:hover {
-  background: #82E0AA;
-}
+
+main .toggle-up-down i:hover { background: #82E0AA; }
+/* toggle styling ends here */
 /*=================================
   main styling ends here
 =================================*/
@@ -360,220 +370,355 @@ main .moveUp:hover {
 =================================*/ 
 
 footer {
-  background-color: white;
-  border-top: 1px solid rgb(199, 196, 196);
+  margin-top: 80px;
+  border-top: 1px solid #666;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
+
 footer .footer-info {
-  width: 70%;
+  margin: 15px auto 15px auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
 }
+
 .footer-info h3 {
-  margin: 12px 0;
+  margin: 10px 0;
+  font-size: 14px;
   font-weight: bold;
 }
-.footer-info p {
-  margin: 5px 0;
-  font-size: 10px;
-}
-.footer-info .about ul {
-  margin-bottom: 10px;
-}
+
+.footer-info .about h3:nth-of-type(2) { margin-top: 20px; }
+.footer-info p { font-size: 10px; }
+.footer-info .about ul { margin: -10px 0 10px 0; }
+
 .footer-info .about ul li a {
-  color: #666;
-  transition: .2s ease-in-out;
+  color: #D1DAD5;
   font-size: 12px;
+  transition: .2s ease-in-out;
 }
-.footer-info .about ul li a:hover {
-  color: #E5E7E9;
-}
+
+.footer-info .about ul li a:hover { color: #E5E7E9; }
+.footer-info .archives h3 { margin-bottom: 4px; }
+
 .footer-info .archives ul, .footer-info .contact ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .footer-info .archives ul li {
-  padding: 5px 0;
-  font-size: 14px;
-  border-bottom: 1px solid #E5E7E9;
   width: 100%;
+  padding: 8px 0;
+  border-bottom: 1px solid #E5E7E9;
+  font-size: 10px;
 }
-.footer-info .archives ul li:nth-child(4) {
-  border-bottom: none;
-}
+
+.footer-info .archives ul li:nth-child(4) { border-bottom: none; }
+
 .footer-info .contact ul li {
-  font-size: 12px;
   padding: 10px 0;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
+  font-size: 10px;
 }
+
+.footer-info .contact ul li a { color: black; }
+
 .footer-info .contact ul li i {
-  margin-right: 5px;
+  margin-right: 10px;
+  color: #D1DAD5;
+  font-size: 16px;
 }
+
 .footer-info .sign form input {
-  margin: 5px 0;
-  outline: none;
-  border: 1px solid #666;
-  padding: 5px;
-  border-radius: 2px;
-}
-.footer-info .sign form button {
-  margin-right: auto;
+  width: 90%;
   padding: 8px;
+  margin: 3px 0;
+  border: none;
+  border-radius: 2px;
+  background-color: #E5E7E9;
+  font-size: 10px;
+  font-weight: bold;
+  outline: none;
+}
+
+.footer-info .sign form button {
+  padding: 8px;
+  margin: 5px 0;
+  border: none;
+  outline: none;
   background-color: #a0c63f;
   color: white;
   font-weight: bold;
   font-size: 12px;
-  outline: none;
-  border: none;
+  float: right;
 }
-.footer-info .sign form button:hover {
-  background-color: #82E0AA;
-}
-footer .final {
+
+.footer-info .sign form button:hover { background-color: #82E0AA; }
+
+footer .wrapper:nth-of-type(2) {
   width: 100%;
+  background-color: #000;
+}
+
+footer .footer-nav {
+  min-width: 60%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  background-color: black;
-  padding: 5px 0;
 }
-.final ul li {
-  margin: 0 1rem;
-}
-.final ul li a {
+
+.footer-nav ul li { margin: 0 10px 0 0; }
+
+.footer-nav ul li a {
   color: white;
   font-size: 10px;
 }
-.final span {
+
+.footer-nav span {
   color: white;
-  font-size: 12px;
+  font-size: 9px;
 }
-
-
-
-
-
  /*=================================
   footer styling ends here
 =================================*/ 
 
 /*media query starts*/
+/*media query for 1165px starts here*/
+@media only screen and (max-width: 1165px) {
+  main h1 { font-size: 22px; }
+
+  .hero h2 {
+    top: 15%;
+    right: 20%;
+    bottom: 42%;
+    left: 57%;
+  }
+}
+/*media query for 1165px ends here*/
+
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+  header .wrapper, .portfolio-section .wrapper { width: 90%; }
+  main .portfolio-section h2 { margin-left: 0; }
+  main #portfolio { grid-template-columns: repeat(2, 1fr); }
+
+  main #advertisers {
+    width: 100%;
+    margin-left: 0;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+  }
+
+  main .advertisers-section h2 { margin-left: 0; }
+}
+/*media query for 1024px ends here*/
+
 /*media query for 995px starts here*/
-@media only screen and (max-width: 1120px) {
-  main {
-    width: 75%;
-  }
-}
 @media only screen and (max-width: 995px) {
-  .hero h2 {
-    font-size: 14px;
-  }
-  main {
-    width: 80%;
-  }
-  footer .footer-info {
-    width: 80%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .hero h2 {
-    top: 25%;
-    bottom: 40%;
-    left: 65%;
-    right: 10%;
-  }
-  main {
-    width: 90%;
-  }
-  main > h1 {
-    font-size: 18px;
-    padding: 0rem;
-  }
-  main #service {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0rem;
-    margin: 1rem;
-  }
-  footer .footer-info {
-    width: 90%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 1rem;
-  }
-}
-@media only screen and (max-width: 690px) {
   nav ul {
-    display: none;
-  }
-  nav .hamburger {
-    display: initial;
-    width: 30px;
-  }
-  #responsive-nav {
     width: 50%;
+    height: 100vh;
+    padding-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: -10px 0 10px -12px rgba(0,0,0,.75);
+    z-index: 20;
+    transition: .5s ease-in-out;
+    transform: translateX(100%);
   }
-  main > h1 {
-    font-size: 16px;
+
+  nav ul.show { transform: translateX(0%); }
+
+  nav ul::after {
+    content: 'x';
+    padding: 6px 12px;
+    position: absolute;
+    border-radius: 50%;
+    top: 5%;
+    right: 10%;
+    background-color: #666;
+    color: white;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
   }
+
+  nav ul li { margin-bottom: 30px; }
+  nav ul li a { font-size: 18px; }
+  nav .hamburger { display: initial; }
+
+  .hero h2 {
+    top: 20%;
+    font-size: 18px;
+  }
+
   main #service {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main .portfolio-section h2, .advertisers-section h2 { margin-left: 0; }
+
+  main #portfolio {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0rem;
-    margin: 0;
+    grid-gap: 16px;
   }
-  main #service li h2 {
-    font-size: 14px;
+
+  main #portfolio article img {
+    width: 100%;
+    height: 100%;
   }
+
+  main #portfolio article {
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer .footer-info, footer .wrapper { width: 90%; }
+}
+/*media query for 995px ends here*/
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  .hero h2 { font-size: 14px; }
+  main section:nth-of-type(2) .wrapper { width: 100%; }
+  main h1 { font-size: 18px; }
+  main #service { padding: 0; }
+
+  main .portfolio-section h2 {
+    padding-left: 0;
+    margin-left: 0;
+    justify-content: center;
+  }
+
   main #portfolio {
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
   }
-  #advertisers {
-    justify-content: center;
+
+  main #portfolio article img, main #portfolio article { width: 80%; }
+
+  main #portfolio article .article-info {
+    width: 90%;
+    padding: 0;
+    margin: auto 0;
+  }
+
+  main #advertisers {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    justify-items: center;
+  }
+
+  main .advertisers-section h2 {
+    margin: 20px auto;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  footer .wrapper { width: 80%; }
+
+  footer .footer-info {
+    padding: 0;
+    margin: 20px auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-info .about {
+    margin: 0;
+    padding: 0;
   }
 }
-@media only screen and (max-width: 550px) {
-  .hero img {
+/*media query for 768px ends here*/
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  header .wrapper { width: 100%; }
+  nav { justify-content: space-around; }
+
+  .hero {
     width: 100%;
+    height: 100%;
   }
-  .hero > h2 {
-    font-size: 12px;
-    top: 10%;
+
+  .hero h2 { font-size: 12px; }
+
+  #left-arrow i {
+    padding: 5px;
+    border: 2px solid white;
+    left: 3%;
+    font-size: 10px;
   }
+
+  #right-arrow i {
+    padding: 5px;
+    border: 2px solid white;
+    right: 3%;
+    font-size: 10px;
+  }
+
+  main .wrapper { width: 100%; }
+  .portfolio-section h2 { margin: 10px 20px; }
+
   main #portfolio article {
-    display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    align-items: center;
   }
-  footer .footer-info {
+
+  main #portfolio article img { width: 100%; }
+  main #portfolio article .article-info { padding: 10px; }
+  main #service { grid-template-columns: 1fr; }
+
+  main #advertisers {
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     grid-gap: 10px;
-    margin-bottom: 1rem;
   }
-}
-@media only screen and (max-width: 490px) {
-  #responsive-nav {
-    width: 100%;
+
+  main .toggle-up-down {
+    position: absolute;
+    top: 25px;
+    right: 10%;
+    bottom: 0;
   }
-  .hero > h2 {
-    display: none;
-  }
-  #advertisers li {
-    width: 100%;
-  }
+
   footer .footer-info {
-    grid-template-columns: repeat(1, 1fr);
+    display: inline;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
-  footer .final {
-    flex-direction: column;
-    justify-content: center;
+
+  footer .wrapper .footer-nav { flex-direction: column; }
+  footer .wrpaper .footer-nav ul { padding-bottom: 10px; }
+}
+/*media query for 540px ends here*/
+
+/*media query for 320px starts here*/
+@media only screen and (max-width: 320px) {
+  .hero img { height: 30vh; }
+
+  .hero h2 {
+    font-size: 8px;
+    top: 35%;
+    right: 14%;
+    bottom: 42%;
+    left: 55%;
   }
-  footer .final span {
-    margin-top: 10px;
-  }
+
+  main .service h1 { font-size: 10px; }
+  main #advertisers { grid-template-columns: 1fr; }
 }
